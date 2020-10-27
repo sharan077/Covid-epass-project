@@ -1,0 +1,315 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link href="https://image.flaticon.com/icons/svg/2790/2790616.svg?v=1.1.1" rel="icon">
+<title>covid-ePass</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+<link rel="stylesheet" href="covidindex.css">
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="main.js"></script>
+</head>
+<body>
+
+
+  <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
+    <div class="container d-flex">
+      <div class="contact-info mr-auto">
+        <i class="fa fa-envelope" style="color:black;"></i> <a href="tnega@tn.gov.in">tnega@tn.gov.in</a>
+        <i class="fa fa-phone" style="color:black;"></i> +91-44-40164907
+      </div>
+      </div>
+    </div>
+
+
+    <header id="header" class="fixed-top">
+      <div class="container d-flex align-items-center">
+
+        <h1 class="logo mr-auto"><a href="index.html">Covid-<span>e</span>Pass</a></h1>
+        <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="epass.html">E-pass</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="signin.html">Sign in</a></li>
+          <li><a href="signup.html">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <h1>Welcome to <span>ePass seva</span>
+      </h1>
+      <h2>We help you get ePass for movement during lockdown.</h2>
+    </div>
+  </section>
+
+
+
+
+  <section id="featured-services" class="featured-services">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h3 style="color:black;">Coronavirus affected cases <span style="color:#fff">In India</span></h3>
+          <p id="tdate"></p>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="bx bxl-dribbble"></i></div>
+            <div class="confirmed"><h6>Confirmed</h6></div>
+            <div class="title" id="tot_cases"></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="bx bx-file"></i></div>
+            <h6 class="active">Active</h6>
+            <div class="title" id="active"></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class="bx bx-tachometer"></i></div>
+            <h6 class="recovered">Recovered</h6>
+            <div class="title" id="recovrd"></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon"><i class="bx bx-world"></i></div>
+            <h6 class="deceased">Deceased</h6>
+            <div class="title" id="dead"></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <section id="about" class="about section-bg">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>About</h2>
+        <h3>Find Out More <span>About Covid19</span></h3>
+        <p>COVID-19 (more specifically, a coronavirus) is the disease identified as the cause of an outbreak of respiratory illness first detected in Wuhan, China.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6" data-aos="zoom-out" data-aos-delay="100">
+          <img src="https://convertpng.com/wp-content/uploads/2020/01/1.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+          <h3>What is ePass?</h3>
+          <p class="font-italic">
+            ePass for Lockdown: As the number of Covid-19 related fatalities continue to rise, several state governments are busy preparing a blueprint to impose fresh lockdown restrictions in worst hit areas. The Union government in a fresh advisory to the state governments has sought strict monitoring along with imposing movement restrictions to deter the spreading of the pandemic.
+          </p>
+          <ul>
+            <li>
+
+              <div>
+                <p>The Centre is likely to share a common ePass template and guidelines for issuing these ePasses online with each state to make the process swift and hassle free.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <p><u><a href="covidhome.html">This</a></u> website was developed to apply for e-passes for movement during lockdown is being used by various states to provide citizen centric e-services to the applicants. Currently, this framework is being used by 17 states of India to provide movement e-Pass services during COVID-19 pandemic.</p>
+              </div>
+            </li>
+          </ul>
+          <p>
+
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+  </section>
+
+
+  <div id="header">
+    <!--<h5 style="text-align:center;color:#106eea">Designed with :</h5>-->
+    <div class="section-title">
+      <h2>website-detail</h2></div>
+      <div class="container d-flex align-items-center">
+
+          <div class="skills">
+              <div class="col-lg-9">
+                  <div class="skill">
+                    <div class="skill-name">HTML</div>
+                    <div class="skill-bar">
+                      <div class="skill-per" per="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="skill">
+                    <div class="skill-name">CSS</div>
+                    <div class="skill-bar">
+                      <div class="skill-per" per="90"></div>
+                    </div>
+                  </div>
+
+                  <div class="skill">
+                    <div class="skill-name">JavaScript</div>
+                    <div class="skill-bar">
+                      <div class="skill-per" per="75"></div>
+                    </div>
+                  </div>
+            </div>
+
+
+            <div class="col-lg-9">
+
+                  <div class="skill">
+                    <div class="skill-name">JSP</div>
+                    <div class="skill-bar">
+                      <div class="skill-per" per="80"></div>
+                    </div>
+                  </div>
+
+                  <div class="skill">
+                    <div class="skill-name">MYSQL</div>
+                    <div class="skill-bar">
+                      <div class="skill-per" per="70"></div>
+                    </div>
+                  </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+    </div>
+
+    <section>
+    </section>
+
+
+    <section id="contact" class="contact" style="background:#fff;">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <h3><span>Contact Us</span></h3>
+          <p>Commissionerate of e-Governance / Tamil Nadu e-Governance Agency</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="info-box mb-4">
+              <i class="fa fa-map"></i>
+              <h3>Our Address</h3>
+              <p>2nd & 7th Floor,Chengalvaraya Naicker Building,Anna Salai,<br> Chennai - 600 002.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="fa fa-envelope"></i>
+              <h3>Email Us</h3>
+              <p>tnega@tn.gov.in</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="fa fa-phone"></i>
+              <h3>Call Us</h3>
+              <p>+91-44-40164907</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    
+    <section></section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+<script>
+
+    async function data()
+    {
+        var response = await fetch("https://api.apify.com/v2/key-value-stores/toDWvRj1JpTXiM8FF/records/LATEST?disableRedirect=true");
+        var totdata = await response.json();
+        var activeCases = totdata.activeCases;
+        var recovered = totdata.recovered;
+        var deaths = totdata.deaths;
+        var totalCases = totdata.totalCases;
+        var d=new Date();
+        document.getElementById('tdate').innerHTML=d;
+        document.getElementById('tot_cases').innerHTML=thousands_separators(totalCases) ;
+        document.getElementById('active').innerHTML=thousands_separators(activeCases) ;
+        document.getElementById('recovrd').innerHTML=thousands_separators(recovered) ;
+        document.getElementById('dead').innerHTML=thousands_separators(deaths);
+    }
+    function thousands_separators(num)
+  {
+    var num_parts = num.toString().split(".");
+    num_parts[0] = num_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return num_parts.join(".");
+  }
+
+
+
+  data();
+
+  $('.skill-per').each(function(){
+    var $this=$(this);
+    var per=$this.attr('per');
+    $this.css("width",per+'%');
+    $({animatedValue:0}).animate({animatedValue: per},{
+      duration:1000,
+      step:function(){
+        $this.attr('per',Math.floor(this.animatedValue));
+      },
+      complete: function(){
+        $this.attr('per',Math.floor(this.animatedValue) + '%');
+      }
+    });
+  });
+
+</script>
+
+
+
+</html>
+    

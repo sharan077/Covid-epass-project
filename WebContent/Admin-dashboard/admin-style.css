@@ -1,0 +1,72 @@
+.sb-topnav{
+  background: linear-gradient(to right, #0062E6, #33AEFF);
+}
+
+.sb-topnav a{
+  text-decoration: none;
+}
+
+.btn :hover{
+  color: #007bff;
+  border-color: #fff;
+}
+
+.nav-text{
+  padding-left: 10px;
+  color: #fff;
+  font-size: 25px;
+}
+
+
+.sidenav {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+background-color: #f8f9fa;
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 10px;
+margin-top: 56px;
+
+}
+
+.sidenav .sidenav-menu-heading{
+  padding: 1.75rem 1rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  align-content: center;
+}
+
+
+.sidenav-link-icon{
+  font-size: 20px;
+  padding-left: 15px;
+}
+
+.sidenav-menu-heading {
+  color: #adb5bd;
+}
+
+
+.sidenav a:hover {
+color: #212529;
+}
+
+.sidenav .closebtn {
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 36px;
+margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}
+}
+
+

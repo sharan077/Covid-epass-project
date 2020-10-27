@@ -1,0 +1,202 @@
+<!DOCTYPE html >
+<html>
+<head>
+<link href="https://image.flaticon.com/icons/svg/2790/2790616.svg?v=1.1.1" rel="icon">
+<title>covid-ePass</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+<link rel="stylesheet" href="covidindex.css">
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="mains.js"></script>
+</head>
+<body>
+
+  <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
+    <div class="container d-flex">
+      <div class="contact-info mr-auto">
+        <i class="fa fa-envelope" style="color:black;"></i> <a href="tnega@tn.gov.in">tnega@tn.gov.in</a>
+        <i class="fa fa-phone" style="color:black;"></i> +91-44-40164907
+      </div>
+      </div>
+    </div>
+
+
+    <header id="header" class="fixed-top">
+      <div class="container d-flex align-items-center">
+
+        <h1 class="logo mr-auto"><a href="index.html">Covid-<span>e</span>Pass</a></h1>
+        <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li class="active"><a href="epass.html">E-pass</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="signin.html">Sign in</a></li>
+          <li><a href="signup.html">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <section>
+
+  </section>
+
+
+  <section class="epass">
+    <div class="container"><form action="Form.jsp">
+      <!-- <h5>Select to see covid case details.</h5><br> -->
+      <div class="row">
+        <div class="source col-md-5">
+          <div class="form-group">
+              <label for="sdistrict"><b>Source</b></label>
+              <select class="custom-select" name="sdistrict" id="sdistrict" onchange="sdist();">
+                <option value="" disabled selected>Travel from</option>
+                <option value="Railway Quarantine">Railway Quarantine</option>
+                <option value="Airport Quarantine">Airport Quarantine</option>
+                <option value="Ariyalur">Ariyalur</option>
+                <option value="Chengalpattu">Chengalpattu</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Coimbatore" >Coimbatore</option>
+                <option value="Cuddalore" >Cuddalore</option>
+                <option value="Dharmapuri" >Dharmapuri</option>
+                <option value="Dindigul">Dindigul</option>
+                <option value="Erode">Erode</option>
+                <option value="Kallakurichi">Kallakurichi</option>
+                <option value="Kancheepuram">Kancheepuram</option>
+                <option value="Kanyakumari">Kanyakumari</option>
+                <option value="Karur">Karur</option>
+                <option value="Krishnagiri">Krishnagiri</option>
+                <option value="Madurai">Madurai</option>
+                <option value="Nagapattinam">Nagapattinam</option>
+                <option value="Namakkal">Namakkal</option>
+                <option value="Nilgiris">Nilgiris</option>
+                <option vaue="Perambalur">Perambalur</option>
+                <option value="Pudukkottai">Pudukkottai</option>
+                <option value="Ramanathapuram">Ramanathapuram</option>
+                <option value="Ranipet">Ranipet</option>
+                <option value="Salem">Salem</option>
+                <option value="Sivaganga">Sivaganga</option>
+                <option value="Thenkasi">Thenkasi</option>
+                <option value="Thanjavur">Thanjavur</option>
+                <option value="Theni" >Theni</option>
+                <option value="Thiruvallur" >Thiruvallur</option>
+                <option value="Thiruvarur">Thiruvarur</option>
+                <option value="Thoothukkudi">Thoothukkudi</option>
+                <option value="Tiruchirappalli">Tiruchirappalli</option>
+                <option value="Thirunelveli">Thirunelveli</option>
+                <option value="Tirupathur">Tirupathur</option>
+                <option value="Tiruppur">Tiruppur</option>
+                <option value="Thiruvannamalai">Thriuvannamalai</option>
+                <option value="Vellore">Vellore</option>
+                <option value="Viluppuram">Vilurppuram</option>
+                <option value="Virudhunagar">Virudhunagar</option>
+              </select>
+              <div id="s-district-wise"></div>
+            </div>
+      </div>
+      <div class="col-md-0.5"><br><br><br><i style="padding:0px;" class="fa fa-exchange"></i>
+      </div>
+      <div class="col-md-5">
+        <div class="destination form-group">
+            <label for="ddistrict"><b>Destination</b></label>
+            <select class="custom-select" id="ddistrict" name="ddistrict" onchange="ddist();">
+              <option value="" disabled selected>Travel to</option>
+              <option value="Railway Quarantine">Railway Quarantine</option>
+              <option value="Airport Quarantine">Airport Quarantine</option>
+              <option value="Ariyalur">Ariyalur</option>
+              <option value="Chengalpattu">Chengalpattu</option>
+              <option value="Chennai">Chennai</option>
+              <option value="Coimbatore" >Coimbatore</option>
+              <option value="Cuddalore" >Cuddalore</option>
+              <option value="Dharmapuri" >Dharmapuri</option>
+              <option value="Dindigul">Dindigul</option>
+              <option value="Erode">Erode</option>
+              <option value="Kallakurichi">Kallakurichi</option>
+              <option value="Kancheepuram">Kancheepuram</option>
+              <option value="Kanyakumari">Kanyakumari</option>
+              <option value="Karur">Karur</option>
+              <option value="Krishnagiri">Krishnagiri</option>
+              <option value="Madurai">Madurai</option>
+              <option value="Nagapattinam">Nagapattinam</option>
+              <option value="Namakkal">Namakkal</option>
+              <option value="Nilgiris">Nilgiris</option>
+              <option value="Perambalur">Perambalur</option>
+              <option value="Pudukkottai">Pudukkottai</option>
+              <option value="Ramanathapuram">Ramanathapuram</option>
+              <option value="Ranipet">Ranipet</option>
+              <option value="Salem">Salem</option>
+              <option value="Sivaganga">Sivaganga</option>
+              <option value="Thenkasi">Thenkasi</option>
+              <option value="Thanjavur">Thanjavur</option>
+              <option value="Theni" >Theni</option>
+              <option value="Thiruvallur" >Thiruvallur</option>
+              <option value="Thiruvarur">Thiruvarur</option>
+              <option value="Thoothukkudi">Thoothukkudi</option>
+              <option value="Tiruchirappalli">Tiruchirappalli</option>
+              <option value="Thirunelveli">Thirunelveli</option>
+              <option value="Tirupathur">Tirupathur</option>
+              <option value="Tiruppur">Tiruppur</option>
+              <option value="Thiruvannamalai">Thriuvannamalai</option>
+              <option value="Vellore">Vellore</option>
+              <option value="Viluppuram">Vilurppuram</option>
+              <option value="Virudhunagar">Virudhunagar</option>
+            </select>
+            <div id="d-district-wise"></div>
+          </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Apply ePass</button></form>
+    </div>
+  </section>
+
+
+
+
+<script>
+
+  async function sdist()
+  {
+      var data1 = await fetch('https://api.covid19india.org/state_district_wise.json');
+      var districtdata1 = await data1.json();
+      var stn = districtdata1["Tamil Nadu"];
+      var sdistrict = document.getElementById("sdistrict").value;
+      var stn = stn.districtData[sdistrict];
+      var sactive=stn.active;
+      var sconfirmed=stn.confirmed;
+      var sdeceased=stn.deceased;
+      var srecovered=stn.recovered;
+      document.getElementById("s-district-wise").innerHTML="<span class='output'>IN "+ sdistrict +"</span><br><span class='active'>Active cases  " + sactive + "</span><br><span class='confirmed'>Confirmed cases " + sconfirmed + "</span><br><span class='recovered'>Recovered cases "+srecovered + "</span><br><span class='death'>Total Deaths "+sdeceased+"</span>";
+
+
+
+  }
+
+  async function ddist()
+  {
+      var data2 = await fetch('https://api.covid19india.org/state_district_wise.json');
+      var districtdata2 = await data2.json();
+      var dtn = districtdata2["Tamil Nadu"];
+      var ddistrict = document.getElementById("ddistrict").value;
+      var dtn = dtn.districtData[ddistrict];
+      var dactive=dtn.active;
+      var dconfirmed=dtn.confirmed;
+      var ddeceased=dtn.deceased;
+      var drecovered=dtn.recovered;
+      document.getElementById("d-district-wise").innerHTML="<span class='output'>IN "+ ddistrict +"</span><br><span class='active'>Active cases  " + dactive + "</span><br><span class='confirmed'>Confirmed cases " + dconfirmed + "</span><br><span class='recovered'>Recovered cases "+drecovered + "</span><br><span class='death'>Total Deaths "+ddeceased+"</span>";
+  }
+
+  sdist();
+  ddist();
+
+</script>
+</body>
+
+</html>
